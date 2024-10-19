@@ -2,10 +2,10 @@
 This project is designed to showcase the completion of the Django machine test. It involves designing REST APIs for managing entities like Users, Clients, and Projects. The system includes many users and clients, where clients can have multiple projects, and projects can be assigned to many users.
 
 ## Django Machine Test Project
-1.How to Run the Machine
-2.Database Design
-3.How to Run the Code
-4.Contributing 
+- How to Run the Machine
+- Database Design
+- How to Run the Code
+- Contributing 
 
 
 ### How to Run the MAchine
