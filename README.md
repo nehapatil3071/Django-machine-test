@@ -57,24 +57,24 @@ Create a new database for your project
 Configure Django to Connect to MySQL: In your settings.py file, add your database configuration
 The database design includes three main entities:
 
-1.User: Represents the users of the system. Users are managed via Django's default admin system.
-2.Client: Represents the clients in the system. A client can have many projects.
-3.Project: Represents the projects associated with a client and assigned to multiple users.
+- User: Represents the users of the system. Users are managed via Django's default admin system.
+- Client: Represents the clients in the system. A client can have many projects.
+- Project: Represents the projects associated with a client and assigned to multiple users.
 
 The relationships between the entities:
   A Client can have multiple Projects.
   A Project can be assigned to multiple Users.
   
 #### Database Tables
-1.User Table:
-Managed by Django's default user model.
+1. User Table:
+  -Managed by Django's default user model.
 
-2.Client Table:
-Fields: id, client_name, created_by, created_at, updated_at
+2. Client Table:
+  -Fields: id, client_name, created_by, created_at, updated_at
 
-3.Project Table:
-Fields: id, project_name, client_id, created_by, created_at, updated_at
-Foreign keys: client_id (linked to Client), users (many-to-many relationship with User)
+3. Project Table:
+  -Fields: id, project_name, client_id, created_by, created_at, updated_at
+  -Foreign keys: client_id (linked to Client), users (many-to-many relationship with User)
 
 #### Migrate the Database
 Now, run the migrations to set up your database schema:
@@ -89,24 +89,24 @@ python manage.py migrate
 Here’s how you can interact with the API endpoints.
 
 1. Register a Client:
-Endpoint: POST /clients/
+  -Endpoint: POST /clients/
 
 3. Fetch Client Info:
-Endpoint: GET /clients/
+  -Endpoint: GET /clients/
 
 5. Edit/Delete Client Info:
-Edit:
-Endpoint: PUT /clients/{id}/
+  -Edit:
+  -Endpoint: PUT /clients/{id}/
 
 4.Delete:
-Endpoint: DELETE /clients/{id}/
-Response: HTTP 204 No Content
+  -Endpoint: DELETE /clients/{id}/
+  -Response: HTTP 204 No Content
 
 7. Add New Project for a Client:
-Endpoint: POST /clients/{id}/projects/
+  -Endpoint: POST /clients/{id}/projects/
 
 9. Retrieve Assigned Projects for Logged-In User:
-Endpoint: GET /projects/
+  -Endpoint: GET /projects/
 
 #### Contributing
 Feel free to fork this repository, make any changes, and submit a pull request. Make sure to pull the latest changes from the main branch before submitting any updates to avoid conflicts.
