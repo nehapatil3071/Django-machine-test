@@ -89,24 +89,24 @@ python manage.py migrate
 Here’s how you can interact with the API endpoints.
 
 1. Register a Client:
-  -Endpoint: POST /clients/
+   -Endpoint: POST /api/clients/
 
 3. Fetch Client Info:
-  -Endpoint: GET /clients/
+   -Endpoint: GET /api/clients/
 
 5. Edit/Delete Client Info:
-  -Edit:
-  -Endpoint: PUT /clients/{id}/
+   -Edit:
+   -Endpoint: PUT /api/clients/{id}/
 
-4.Delete:
-  -Endpoint: DELETE /clients/{id}/
-  -Response: HTTP 204 No Content
+4. Delete:
+   -Endpoint: DELETE /clients/{id}/
+   -Response: HTTP 204 No Content
 
 7. Add New Project for a Client:
-  -Endpoint: POST /clients/{id}/projects/
+   -Endpoint: POST /api/clients/{id}/projects/
 
 9. Retrieve Assigned Projects for Logged-In User:
-  -Endpoint: GET /projects/
+   -Endpoint: GET /api/projects/
 
 #### Contributing
 Feel free to fork this repository, make any changes, and submit a pull request. Make sure to pull the latest changes from the main branch before submitting any updates to avoid conflicts.
