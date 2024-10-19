@@ -22,22 +22,33 @@ cd Django-machine-test
 
 ##### Step 2: Set Up the Virtual Environment
 It's recommended to run the project inside a virtual environment. Set up the virtual environment using the following commands:
-
+```python
 python -m venv env
 .\env\Scripts\activate
+```
+
 
 ##### Step 3: Install Dependencies
 Install the required dependencies from requirements.txt:
+```python
 pip install -r requirements.txt
+```
+
 
 ##### Step 4: Set Up the Database
 Make sure you have MySQL installed and running. Update your database credentials in the Django project’s settings. Then, run the following commands to set up the database:
+```python
 python manage.py makemigrations
 python manage.py migrate
+```
+
 
 ##### Step 6: Run the Server
 To start the Django development server, use the command:
+```python
 python manage.py runserver
+```
+
 Now, the server should be running at http://127.0.0.1:8000/.
 
 ### Database Design
@@ -68,8 +79,10 @@ Foreign keys: client_id (linked to Client), users (many-to-many relationship wit
 #### Migrate the Database
 Now, run the migrations to set up your database schema:
 #### Apply Django migrations
+```python
 python manage.py makemigrations
 python manage.py migrate
+```
 
 ### How to Run the Code
 ##### Testing the API Endpoints
